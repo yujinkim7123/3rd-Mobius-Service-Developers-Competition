@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Life Shot Maker</title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Bodo - Simple One Page Personal" name="description">
+  <meta content="BdgPixel" name="author">
+  <!--Fav-->
+  <link href="images/favicon.ico" rel="shortcut icon">
+
+  <!--styles-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/owl.carousel.css" rel="stylesheet">
+  <link href="css/owl.theme.css" rel="stylesheet">
+  <link href="css/magnific-popup.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <link href="css/button.css" rel="stylesheet">
+  <link href="css/join_style1.css" rel="stylesheet">
+  <link href="css/popmail.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+       <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div style="height: 350px;width: 100%;margin: 0 auto;background-color: #81F0BC;">
+        <div class="mid_text">
+          <p id="m">인생의 소중한 순간을 담은 사진을 저장하세요!</p>
+        </div>
+        <div class="top_text">
+          <p id="t" style="line-height:20px;">일련번호를 통해 언제 어디서나 사진을 구매할 수 있습니다.<br>메일을 입력하고 Life Shot Maker 서버에 당신의 추억을 저장하세요.</p>
+        </div>
+        <div class="bottom_text">
+          <p id="b" style="line-height:20px;">※ 이메일을 입력하지 않으면 <지금 구매>는 가능하지만 페이지를 나가게 되면 사진들은 삭제됩니다!</p>
+        </div>
+        <!--<div class="mid_text">
+          <p id="m">Save pictures of life's precious moments!</p>
+        </div>
+        <div class="top_text">
+          <p id="t" style="line-height:20px;">Get serial numbers and download photos anytime, anywhere<br>Enter your mail and save your memories on Life Shot Maker server.</p>
+        </div>
+        <div class="bottom_text">
+          <p id="b" style="line-height:20px;">※ If you don't enter an email, you can purchase it now, but be careful because your pictures will be deleted when you leave the page!</p>
+        </div>-->
+      </div>
+      <div class="email_box">
+        <label for="email"><b>Email</b></label>
+        <input type="email" class="mail" id="inputmail" placeholder="Enter your email here" name="email" required>
+        <div style="width: 100%;text-align: center;margin: 10px auto;">
+          <button id="send">Get a serial number</button>
+        </div>
+        <div style="width: 100%;text-align: center; margin: 50px auto 10px auto;">
+          <span class="info">
+            User information, including photos and e-mail, will be deleted after a month.
+          </span>
+        </div>
+      </div>
+      <!--<div style="height:100px; background-color:#f1f1f1;">
+        <button id="cancel">cancel</button>-->
+    </div>
+  </div>
+  </div>
+
+
+  <a id="button"></a>
+
+  <!--PRELOADER-->
+  <div id="preloader">
+    <div id="status">
+      <img alt="logo" src="images/logo-big.png">
+    </div>
+  </div>
+  <!--/.PRELOADER END-->
+
+  <!--HEADER -->
+  <div class="header">
+    <div class="for-sticky">
+      <!--LOGO-->
+      <div style="height:200px;" class="col-md-2 col-xs-6 logo">
+        <a href="index.html"><img alt="logo" class="logo-nav" src="images/logo.png"></a>
+      </div>
+      <!--/.LOGO END-->
+    </div>
+    <div class="menu-wrap">
+
+      <button class="close-button" id="close-button">Close Menu</button>
+    </div>
+    <button class="menu-button" id="open-button">
+
+    </button>
+    <!--/.for-sticky-->
+  </div>
+  <!--/.HEADER END-->
+
+
+
+
+  <!--CONTENT WRAP-->
+  <div class="content-wrap">
+    <!--CONTENT-->
+    <div class="content">
+
+      <!--WORK-->
+
+      <section class="grey-bg mar-tm-10" id="work">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="title-small">
+                <span>Gallery</span>
+              </h3>
+              <p class="content-detail">
+                Life Shot Maker 를 통해 촬영한 당신의 사진 갤러리 입니다
+              </p>
+            </div>
+            <br>
+            <div class="col-md-8">
+
+              <!--PORTFOLIO IMAGE-->
+              <ul class="portfolio-image" id="start">
+
+
+              </ul>
+              <!--/.PORTFOLIO IMAGE END-->
+            </div>
+          </div>
+          <br>
+          <button onclick="check()">지금 구매</button>
+          <button id="later">다음 구매</button>
+          <a  href="index.html"><button id="quit">나가기</button></a>
+        </div>
+      </section>
+
+      <!--/.WORK END-->
+
+      <!--FOOTER-->
+      <footer>
+        <div class="footer-top">
+          <ul class="socials">
+            <li class="facebook">
+              <a href="#" data-hover="Facebook">Facebook</a>
+            </li>
+            <li class="twitter">
+              <a href="#" data-hover="Twitter">Twitter</a>
+            </li>
+            <li class="gplus">
+              <a href="#" data-hover="Google +">KaKao Talk</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <img src="images/logo-bottom.png" alt="logo bottom" class="center-block" />
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--/.FOOTER-END-->
+
+      <!--/.CONTENT END-->
+    </div>
+    <!--/.CONTENT-WRAP END-->
+  </div>
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.appear.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/classie.js" type="text/javascript"></script>
+<script src="js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+<script src="js/masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="js/masonry.js" type="text/javascript"></script>
+<script src="js/smooth-scroll.min.js" type="text/javascript"></script>
+<script src="js/typed.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/simple1.js" type="text/javascript"></script>
+<script src="js/greally_web.js" type="text/javascript"></script>
+<script src="js/bu.js" type="text/javascript"></script>
+
+
+
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" media="all and (orientation:landscape)" href="landscape.css">
+<link href="css/jquery.modal.css" type="text/css" rel="stylesheet" />
+<link href="css/jquery.modal.theme-xenon.css" type="text/css" rel="stylesheet" />
+<link href="css/jquery.modal.theme-atlant.css" type="text/css" rel="stylesheet" />
+<link href="css/thumb.css" type="text/css" rel="stylesheet" />
+<link href="css/css1.css" rel="stylesheet">
+<link href="css/join_style2.css" rel="stylesheet">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <div class="main">
+
+    <div style="height:90px;">
+      <button id="CAM1">CAM1</button>
+    </div>
+    <hr>
+    <!-- <p>Take Your Pictures of The Day</p> -->
+
+    <div id="stage">
+      <img src="http://192.168.0.35:8091/?action=stream" id="stream"
+        style="width: 1024px;height: 576px; -webkit-user-select: none;">
+    </div>
+
+    <div class="thumbnail" style="margin-top: -58%">
+      <div class="container">
+
+        <a class="prev" onclick="plusSlides(-1)"><</a>
+        <a class="next" onclick="plusSlides(1)">></a>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+  <div class="close">
+    <a href="#" id="warning"><img src="images/error.png" style="width:70px"></a>
+  </div>
+
+
+  <div class="btn move">
+    <button class="button" id="Up1"><img src="images/up.png" style="width:100px"></button>
+    <br>
+    <button class="button" id="Left1"><img src="images/down.png" style="width:100px"></button>
+    <br>
+    <button class="button" id="Down1"><img src="images/left.png" style="width:100px"></button>
+    <br>
+    <button class="button" id="Right1"><img src="images/right.png" style="width:100px"></button>
+  </div>
+
+
+  <div class="cam">
+    <button class="button1" id="Shoot1"><img src="images/photo.png" style="width:60px"></button>
+  </div>
+
+  <div class="cam2">
+    <div id="controls"></div>
+  </div>
+
+</body>
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/zoom.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/jquery.modal.js"></script>
+<script src="js/slide2.js" type="text/javascript"></script>
+<script>
+  $(document).ready(function (e) {
+    //warning
+    $('a#warning').click(function () {
+      modal({
+        type: 'warning',
+        title: 'Warning',
+        text: 'Would you like to stop the shoot? Return to main page. ',
+        center: false,
+        buttons: [{
+          text: 'OK', //Button Text
+          val: 'ok', //Button Value
+          eKey: true, //Enter Keypress
+          addClass: 'btn-light-white', //Button Classes (btn-large | btn-small | btn-green | btn-light-green | btn-purple | btn-orange | btn-pin$
+          onClick: function (dialog) {
+            location.href = "gallery2.html";
+            return true;
+          }
+        },],
+      });
+    });
+  });
+
+</script>
+
+<script type="text/javascript" src="js/control3.js"></script>
+
+</html>

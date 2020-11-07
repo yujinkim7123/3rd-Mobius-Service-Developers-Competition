@@ -1,0 +1,126 @@
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /*auto Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 0px 0px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */                          
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.email_box{
+    border: 2px solid #fefefe;
+    padding: 30px 20px 20px 20px;
+}
+
+
+.info{
+    font-size: small;
+    line-height: 1.5em; 
+    color: #A4A4A4;
+    vertical-align: center;
+    text-align: center;
+}
+
+.top_text{
+    padding: 0px 30px;
+    font-size: 14px;
+    color: #3D7058;
+    text-align: left;
+}
+
+p#t{
+    font-size: 14px;
+}
+
+.mid_text{
+    padding: 50px 30px 10px 30px;
+    font-size: 50px;
+    color: white;
+    text-align: left;
+}
+
+p#m{
+    font-weight: bold; 
+    font-size: 30px;
+    line-height:40px; 
+}
+
+.bottom_text{
+    padding: 10px 30px;
+    font-size: 17px;
+    color: #F09081;
+    text-align: left;
+}
+
+p#b{
+    font-size: 17px;
+}
+
+label[for="lamail"]{
+    position: relative;
+    margin: 0 auto;
+}
+
+.mail{
+    width: 100%;
+    height:50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+/*vertical-align: middle;*/
+    font-size:20px;
+    border-radius: 5px;
+}
+
+#cancel{
+    border: 3px;
+
+    padding: 10px 18px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    
+    margin: 8px 0;
+    letter-spacing: 0.05em;
+    
+    height: 40px;
+    width: 100px;
+}
+
+#send{
+    width: 100%;
+    vertical-align: center;
+    background-color:#81F0BC;
+    color: white;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+}

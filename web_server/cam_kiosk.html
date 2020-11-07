@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Life Shot Maker</title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Bodo - Simple One Page Personal" name="description">
+  <meta content="BdgPixel" name="author">
+  <!--Fav-->
+  <link href="images/favicon.ico" rel="shortcut icon">
+
+  <!--styles-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/owl.carousel.css" rel="stylesheet">
+  <link href="css/owl.theme.css" rel="stylesheet">
+  <link href="css/magnific-popup.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <link href="css/button.css" rel="stylesheet">
+  <link href="css/map.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/templatemo-style1.css">
+
+
+  <!--[if lt IE 9]>
+       <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <a id="button"></a>
+
+
+  <!--PRELOADER-->
+  <div id="preloader">
+    <div id="status">
+      <img alt="logo" src="images/logo-big.png">
+    </div>
+  </div>
+  <!--/.PRELOADER END-->
+
+
+  <!--HEADER -->
+  <div class="header">
+    <div class="for-sticky">
+      <!--LOGO-->
+      <div class="col-md-2 col-xs-6 logo">
+        <a href="index.html"><img alt="logo" class="logo-nav" src="images/logo.png"></a>
+      </div>
+      <!--/.LOGO END-->
+    </div>
+    <div class="menu-wrap">
+      <nav class="menu">
+        <div class="menu-list">
+          <a href="index.html">
+            <span>Home</span>
+          </a></br>
+          <a data-scroll="" href="#services">
+            <span>Services</span>
+          </a></br>
+          <a data-scroll="" href="#employement">
+            <span>Manual</span>
+          </a></br>
+          <a href="cam_kiosk.html" class="active">
+            <span>Shooting</span>
+          </a>
+
+        </div>
+      </nav>
+      <button class="close-button" id="close-button">Close Menu</button>
+
+    </div>
+    <button class="menu-button" id="open-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <!--/.for-sticky-->
+  </div>
+  <!--/.HEADER END-->
+
+  <!--CONTENT WRAP-->
+  <div class="content-wrap">
+    <!--CONTENT-->
+    <div class="content">
+
+
+
+      <!--WORK-->
+      <section class="grey-bg mar-tm-10" id="work">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="title-small">
+                <div class="font">Take Your Pictures of The Day</div>
+              </h3>
+              <br>
+              <p>
+              </p>
+            </div>
+            <br>
+
+            <div class="col-md-8">
+
+
+              <!--PORTFOLIO IMAGE-->
+              <ul class="portfolio-image">
+
+                <div class="cd-full-width">
+
+                  <div class="container-fluid js-tm-page-content">
+
+                    <section>
+
+                        
+                        <h2>coex</h2>
+                        <a href="slide0.html"><img id="Camera2"class="grayscale" src="pic1.jpg" alt=""></a>
+
+
+                      <div class="container">
+                        <div id="map" style="width:110%;height:550px;margin-left:-10%;"></div>
+                        <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+                        <script type="text/javascript"
+                          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=31adcaf17249f4348e4b0a6ddda67c21"></script>
+                        <script>
+
+                          var ae = "zone1"; //Id(camera1)에 맞춰 수정 필요
+                          var cnt = "state";
+                          var cin = "1";
+                          var addr = "http://192.168.0.11:7599/rosemary";
+                          var settings;
+
+                          console.log(cin);
+                          state = 3;
+                          addr = addr + "/" + ae + "/" + cnt;
+                          settings = {
+                            "async": true,
+                            "crossDomain": true,
+                            "url": addr,
+                            "method": "POST",
+                            "headers": {
+                              "Accept": "application/json",
+                              "X-M2M-RI": "12345",
+                              "X-M2M-Origin": "SxBMnw8TT5b",
+                              "Content-Type": "application/json; ty=4",
+                            },
+                            "data": "{\n    \"m2m:cin\": {\n        \"con\": \"" + cin + "\" \n    }\n}"
+                          }
+
+                          var data;
+                          var data_;
+                          var zone1_state='<div style="padding:5px;"></div>'
+                            + '<a href="camera.html">Photozone1 <br> <em style="color: red">Available</a>'; 
+                          var settings = {
+                            "async": false,
+                            "crossDomain": true,
+                            "url": "http://192.168.0.11:7599/rosemary/zone1/state/la",
+                            "method": "GET",
+                            "headers": {
+                              "Accept": "application/json",
+                              "X-M2M-RI": "1dfada2345",
+                              "X-M2M-Origin": "S20170717074825768bp2l",
+                              "Host": "http://192.168.0.4"
+                            }
+                          };
+                          $.ajax(settings).done(function (response) {
+                            console.log(response);
+                            data = response["m2m:cin"];
+
+                            console.log(data);
+                            data_ = data["con"];
+
+                            var value = data_;
+                            console.log(value);
+
+                            if (value == "1") {
+                              zone1_state='<div style="padding:5px;"></div>'
+                            + '<a>Photozone1<br><em style="color: gray">Unavailble</a>';
+                            } 
+                          });
+
+                          ae = "zone2"; //Id(camera1)에 맞춰 수정 필요
+                          cnt = "state";
+                          cin = "1";
+                          addr = "http://192.168.0.11:7599/rosemary";
+                          settings;
+
+                          console.log(cin);
+                          state = 3;
+                          addr = addr + "/" + ae + "/" + cnt;
+                          settings = {
+                            "async": true,
+                            "crossDomain": true,
+                            "url": addr,
+                            "method": "POST",
+                            "headers": {
+                              "Accept": "application/json",
+                              "X-M2M-RI": "12345",
+                              "X-M2M-Origin": "SxBMnw8TT5b",
+                              "Content-Type": "application/json; ty=4",
+                            },
+                            "data": "{\n    \"m2m:cin\": {\n        \"con\": \"" + cin + "\" \n    }\n}"
+                          }
+
+                          var zone2_state='<div style="padding:5px;"></div>'
+                            + '<a href="camera2.html">Photozone2<br><em style="color: red">Available</a>'; 
+                          var settings = {
+                            "async": false,
+                            "crossDomain": true,
+                            "url": "http://192.168.0.11:7599/rosemary/zone2/state/la",
+                            "method": "GET",
+                            "headers": {
+                              "Accept": "application/json",
+                              "X-M2M-RI": "1dfada2345",
+                              "X-M2M-Origin": "S20170717074825768bp2l",
+                              "Host": "http://192.168.0.4"
+                            }
+                          };
+                          $.ajax(settings).done(function (response) {
+                            console.log(response);
+                            data = response["m2m:cin"];
+
+                            console.log(data);
+                            data_ = data["con"];
+
+                            var value = data_;
+                            console.log(value);
+
+                            if (value == "1") {
+                              zone2_state='<div style="padding:5px;"></div>'
+                            + '<a>Photozone2<br><em style="color: gray">Unavailable</a>';
+                            } 
+                          });
+
+                          
+                        </script>
+
+                        <br>
+
+
+                      </div>
+                    </section>
+
+                  </div>
+
+                </div>
+
+              </ul>
+
+              <!--/.PORTFOLIO IMAGE END-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/.WORK END-->
+
+      <section class="featured-food">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="food-item">
+                
+                <h2>Photozone1</h2>
+                <img src="photozone1.jpeg" alt="">
+                <div class="text-content">
+                 
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="food-item">
+                <h2>Photozone2</h2>
+                <img src="photo3.jpeg" alt="">
+                <div class="text-content">
+                 
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="food-item">
+                <h2>Photozone3</h2>
+                <img src="photo2.jpeg" alt="">
+                <div class="text-content">
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!--FOOTER-->
+      <footer>
+        <div class="footer-top">
+
+        </div>
+
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <img src="images/logo-bottom.png" alt="logo bottom" class="center-block" />
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--/.FOOTER-END-->
+
+      <!--/.CONTENT END-->
+    </div>
+    <!--/.CONTENT-WRAP END-->
+  </div>
+
+
+  <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="js/jquery.appear.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/classie.js" type="text/javascript"></script>
+  <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+  <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+  <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>
+  <script src="js/masonry.js" type="text/javascript"></script>
+  <script src="js/smooth-scroll.min.js" type="text/javascript"></script>
+  <script src="js/typed.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+  <script src="js/hero-slider-main.js"></script>
+  <script src="js/bu.js" type="text/javascript"></script>
+
+</body>
+
+</html>

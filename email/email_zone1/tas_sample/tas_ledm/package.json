@@ -1,0 +1,28 @@
+{
+  "name": "tas_ledm",
+  "version": "0.0.1",
+  "description": "TAS for RGB led module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TAS",
+    "RGB",
+    "LED",
+    "Mobius",
+    "nCube",
+    "oneM2M"
+  ],
+  "author": "J. Yun, SCH Univ.",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "net": "^1.0.2",
+    "nodemailer": "^6.3.1",
+    "nodemailer-smtp-pool": "^2.8.3",
+    "onoff": "^4.1.1",
+    "shortid": "^2.2.14",
+    "xml2js": "^0.4.19"
+  }
+}

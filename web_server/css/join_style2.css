@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+	
+input{
+	
+	width: 50px;
+    height: 50px;
+	
+}
+
+#CAM1,#CAM2 {
+    display: inline-block;
+    color: #000000;
+  
+    width: 150px;
+    height: 80px;
+  
+    padding: 0 20px;
+    background: #bfcdec;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    
+    margin: 0% auto;
+    letter-spacing: 0.05em;
+}
+
+.submits {
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin-left: 2%;
+}
+
+#CAM1:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+#CAM2:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
