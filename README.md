@@ -1,4 +1,3 @@
-# 3rd-Mobius-Service-Developers-Competition
 
 # 제 3회에 모비우스 대회 
 
